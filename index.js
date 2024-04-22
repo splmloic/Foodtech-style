@@ -69,6 +69,7 @@ document.getElementById('galerie-photo').addEventListener('click', () => {
         repas.style.display ='none';
         photos.style.display ='block';
         const gridContainer = document.getElementById('gridContainer');
+        gridContainer.innerHTML = '';
         imageLinks.forEach(link => {
             const gridItem = document.createElement('div');
             gridItem.className = 'grid-item';
