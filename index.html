@@ -10,25 +10,41 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+        <link rel="icon" type="image/vnd.icon" href="imgs/icon.webp">
         <title>Foodtech</title>
     </head>
     <body class="img-background">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active text-warning">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" id="platdujour">Plat Du Jour</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning">Galerie Photo</a>
-            </li>
-          </ul>
-        <div class="position-absolute top-50 start-50 translate-middle bg-dark p-4 rounded-4 text-warning">
+        <section class="nav justify-content-center">
+              <a class="nav-link text-warning" id ="Accueil">Accueil</a>
+              <a class="nav-link text-warning" id="platdujour">Plats Du Jour</a>
+              <a class="nav-link text-warning" id="galerie-photo">Galerie Photo</a>
+        </section>
+
+        <section class="position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-50 p-4 rounded-4 text-warning" id="start">
             <h1 class="text-center">Produits frais et bio du marché</h1>
             <p class="text-center">Pour une sélection locale et un menu unique</p>
             <p class="text-center"><a class="btn btn-outline-warning">Réserver une table</a></p>
-          </div>
+        </section>
+        <section class="position-absolute top-50 start-50 translate-middle text-center bg-dark bg-opacity-50 p-4 rounded-4 text-warning" id="repas" style="display: none;">
+            <h1>Plats Du Jour</h1>
+            <ol id="olRepas">
+            </ol>
+            <p class="text-center"><a class="btn btn-outline-warning" onclick="NewMenu()">Marre de ce menu ? Changez-le!</a></p> 
+        </section>
+
+        <section class="position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-50 p-4 rounded-4 text-center text-warning" id="photos" style="display: none;">
+            <h1>Galerie Photo</h1>
+            <div class="grid-container" id="gridContainer">
+              </div>
+        </section>
+
+        <section class="overlay" id="overlay">
+            <div class="popup">
+              <h2>Pas Si vite !!!</h2>
+              <p>N'hésite pas a nous suivre sur <a href="">instagram</a></p>
+              <button class="btn btn-outline-secondary" onclick="closePopup()">Fermer</button>
+            </div>
+          </section>
     </body>
     <script src="index.js"></script>
 </html>
